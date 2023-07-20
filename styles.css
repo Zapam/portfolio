@@ -86,6 +86,7 @@ a{
   --background-light: #fafafa;
   --secondary-light: #d0e0fb;
   --accent-light: #16e99c;
+  --comment:red;
 }
 
 /* .ri-codepen-fill, .ri-linkedin-box-fill, .ri-github-fill{
@@ -98,6 +99,7 @@ body{
   background-color: var(--background-dark);
   color: var(--text-dark);
 }
+/*!! navbar start */
 
 header{
   position: fixed;
@@ -226,3 +228,5 @@ header{
 
   }
 }
+
+/*!! navbar finished */

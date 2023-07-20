@@ -1,72 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 
-
-/* 
-body{
-  background-color: var(--background-light);
-  box-sizing: border-box;
-  margin: 0;
-  font-family: 'Ubuntu', sans-serif;
-}
-
-
-
-.hero{
-  width: 100%;
-  background: var(--background-light);
-  max-height:8.5625rem;
-  display: flex;
-  position: fixed;
-  font-weight: 600;
-}
-
-.logo-img{
-  width:16%;
-  height: auto;
-  margin-right: 1rem;
-  margin-left: 7.5rem;
-}
-
-.logo{
-  display: flex;
-  align-items: center;
-  width: 30%;
-}
-
-li{
-  list-style: none;
-}
-
-ul{
-  display: flex;
-
-}
-
-.hero-links{
-  width: 45%;
-  padding-top: 0.5%;
-}
-
-.link{
-  margin: 0 3rem;
-}
-
-.social-media{
-  display: flex;
-  justify-content: center;
-  width: 25%;
-  margin-right: 7.5rem;
-}
-
-.social-media-link{
-  margin: 0 1rem;
-}
-
-a{
-  color: var(--texti-light);
-  text-decoration: none;
-} */
-
 * {
   text-decoration: none;
   padding: 0;
@@ -89,10 +22,6 @@ a{
   --comment:red;
 }
 
-/* .ri-codepen-fill, .ri-linkedin-box-fill, .ri-github-fill{
-  color: #FFF;
-  
-} */
 
 body{
   min-height: 100vh;

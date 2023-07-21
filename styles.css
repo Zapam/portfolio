@@ -166,7 +166,7 @@ header {
 
 /*!! navbar finished */
 
-/*!!Begining*/
+/*!!banner start*/
 
 .start {
   margin-left: 10%;
@@ -277,4 +277,32 @@ header+main {
   .zapam {
     display: none;
   }
+}
+/*!! banner finished */
+
+/*!! projects start */
+
+/* styles.css */
+
+/* Apply CSS Grid to the container */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-gap: 11px;
+  place-items: center; /* Center items both horizontally and vertically */
+  height: 4vh; /* Set the container height to fill the viewport */
+}
+
+/* Apply styles to the grid items */
+.grid-project {
+  background-color: var(--secondary-dark);
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  min-width: 2rem;
+  width: 70%;
+}
+
+.grid-project img{
+  width: 70%;
 }

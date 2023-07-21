@@ -13,24 +13,29 @@
   --text-dark: #fafafa;
   --background-dark: #050505;
   --primary: #0f8b9f;
-  --secondary-dark: #04142f;
+  --secondary-dark: #1a1e25;
   --accent-dark: #73f2c3;
   --texti-light: #050505;
   --background-light: #fafafa;
   --secondary-light: #d0e0fb;
   --accent-light: #16e99c;
-  --comment:red;
+  --comment: red;
+  /* Define CSS variables for standard screen sizes */
+  --small-screen: 767px;
+  --medium-screen: 1023px;
+  --large-screen: 1024px;
 }
 
 
-body{
+body {
   min-height: 100vh;
   background-color: var(--background-dark);
   color: var(--text-dark);
 }
+
 /*!! navbar start */
 
-header{
+header {
   position: fixed;
   width: 100%;
   top: 0;
@@ -39,69 +44,71 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: transparent;
+  background: var(--background-dark);
   padding: 28px 12%;
-  transition: all .50s ease ;
+  transition: all .50s ease;
+  border-bottom: 2px solid var(--accent-dark);
+  height: 6rem;
 }
 
-.logo{
+.logo {
   display: flex;
   align-items: center;
 }
 
-.logo i{
+.logo i {
   color: var(--accent-dark);
   font-size: 28px;
   margin-right: 3px;
 }
 
-.logo span{
+.logo span {
   color: var(--text-dark);
   font-size: 1.7rem;
   font-weight: 600;
 }
 
-.logo img{
+.logo img {
   width: 64px;
   height: auto;
 }
 
-.navbar{
+.navbar {
   display: flex;
 }
 
-.navbar a{
+.navbar a {
   color: var(--text-dark);
   font-size: 1.1rem;
   font-weight: 500;
   padding: 5px 0;
   margin: 0px 30px;
-  transition: all .50s ease ;
+  transition: all .50s ease;
 }
 
-.navbar a:hover{
+.navbar a:hover {
   color: var(--accent-dark);
 }
 
-.main{
+.main {
   display: flex;
   align-items: center;
 }
 
-.main a{
+.main a {
   margin-right: 25px;
   margin-left: 10px;
   color: var(--text-dark);
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: 500;
-  transition: all .50s ease ;
+  transition: all .50s ease;
 }
 
-.main a:hover{
+.main a:hover {
   color: var(--accent-dark);
 }
 
-#menu-icon{
+#menu-icon {
   font-size: 35px;
   color: var(--text-dark);
   cursor: pointer;
@@ -109,53 +116,165 @@ header{
   display: none;
 }
 
-@media (max-width: 1280px){
-  header{
+@media (max-width: 1280px) {
+  header {
     padding: 14px 2%;
     transition: .2s;
   }
 
-  .navbar a{
+  .navbar a {
     padding: 5px 0;
     margin: 0px 20px;
   }
 }
 
-@media(max-width:1090px){
-  #menu-icon{
+@media(max-width:1090px) {
+  #menu-icon {
     display: block;
   }
 
-  .navbar{
+  .navbar {
     position: absolute;
     top: 100%;
     right: -100%;
     width: 270px;
-    height: 15vh;
     background-color: var(--primary);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     border-radius: 10px;
-    transition: all .50s ease ;
+    transition: all .50s ease;
   }
 
-  .navbar a{
+  .navbar a {
     display: block;
     margin: 12px 0;
     padding: 0px 25px;
-    transition: all .50s ease ;
+    transition: all .50s ease;
   }
 
-  .navbar a:hover{
+  .navbar a:hover {
     color: var(--text-dark);
     transform: translateY(5px);
   }
 
-  .navbar.open{
+  .navbar.open {
     right: 2%;
 
   }
 }
 
 /*!! navbar finished */
+
+/*!!Begining*/
+
+.start {
+  margin-left: 10%;
+  width: 50%;
+}
+
+.start p {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 1.5rem;
+  margin-left: 3rem;
+  line-height: 2rem;
+  margin-bottom: 0.5rem;
+  width: 70%;
+}
+
+.start h1 {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.start button {
+  display: inline-block;
+  width: 8rem;
+  height: 3rem;
+  border-radius: 10px;
+  border: 1px solid var(--accent-dark-dark);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+  margin-left: 4rem;
+  margin-top: 0.75rem;
+}
+
+.start button::before,
+.start button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transform: skew(15deg);
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.start button::before {
+  left: -10px;
+  background: var(--accent-light);
+}
+
+.start button::after {
+  right: -10px;
+  background: var(--accent-dark);
+}
+
+.start button:hover::before,
+.start button:hover::after {
+  width: 58%;
+}
+
+.start button:hover span {
+  color: var(--secondary-dark);
+  transition: 0.3s;
+}
+
+.start button span {
+  color: var(--texti-light);
+  font-size: 18px;
+  transition: all 0.3s ease-in;
+}
+
+header+main {
+  margin-top: 6rem;
+  padding: 9rem;
+}
+
+
+.start {
+  margin: auto;
+  width: 100%;
+}
+
+/* @media(max-width:720px) {
+  header + main {
+    margin-top: 6rem;
+    padding: 1rem;
+  } */
+
+
+
+
+/* Example media queries using the CSS variables */
+@media screen and (max-width: 767px) {
+
+  /* Styles for small mobile devices */
+  header+main {
+    margin-top: 6rem;
+    padding: 1rem;
+  }
+
+  .zapam {
+    display: none;
+  }
+}

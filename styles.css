@@ -423,10 +423,10 @@ hr {
   height: 1.5rem;
 }
 
-.level{
-  position: relative;
-  top: -1.5rem;
-  left:88%;
+.bar-label{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
 }
 
 .fill-bar{
@@ -533,4 +533,9 @@ hr {
 }
 
 /*TODO make the footer about me responsive later*/
-/* TODO fix the empty horizantal space */
+
+.bar-label{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+}

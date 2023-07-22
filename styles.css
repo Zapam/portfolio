@@ -186,17 +186,18 @@ header {
 }
 
 .start h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  margin-left: 0.7rem;
 }
 
 .start button {
   display: inline-block;
   width: 8rem;
   height: 3rem;
-  border-radius: 10px;
+  border-radius: 5rem;
   border: 1px solid var(--accent-dark-dark);
   position: relative;
   overflow: hidden;
@@ -278,6 +279,7 @@ header+main {
     display: none;
   }
 }
+
 /*!! banner finished */
 
 /*!! projects start */
@@ -289,8 +291,12 @@ header+main {
   display: grid;
   grid-template-columns: repeat(2, 2fr);
   grid-gap: 11px;
-  place-items: center; /* Center items both horizontally and vertically */
-  height: 4vh; /* Set the container height to fill the viewport */
+  place-items: center;
+  /* Center items both horizontally and vertically */
+  height: 4vh;
+  /* Set the container height to fill the viewport */
+  width: 100%;
+  height: 100%;
 }
 
 /* Apply styles to the grid items */
@@ -298,11 +304,233 @@ header+main {
   background-color: var(--secondary-dark);
   border: 1px solid #ccc;
   padding: 20px;
-  text-align: center;
   min-width: 2rem;
   width: 70%;
+  text-align: center;
+  border-radius: 50px 0;
+  margin-top: 2rem;
+  border: none;
+  box-shadow: 0 0 10px var(--accent-dark);
 }
 
-.grid-project img{
+.grid-project img {
   width: 70%;
+  border-radius: 5px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
 }
+
+@media screen and (max-width: 767px) {
+  .projects {
+    grid-template-columns: repeat(1, 2fr);
+  }
+
+  @media screen and (min-width: 767px) and (max-width:1023px) {
+    .projects {
+      grid-template-columns: repeat(1, 2fr);
+    }
+  }
+}
+
+.p-div {
+  margin-top: 20rem;
+}
+
+.p-div .h2-p {
+  margin-bottom: 5rem;
+  margin-left: 0.7rem;
+  font-size: 3rem;
+}
+
+hr {
+  height: 4px;
+  width: 15rem;
+  margin: auto;
+  margin-top: 1rem;
+  background: linear-gradient(90deg, var(--accent-dark), var(--primary));
+  border: none;
+  border-radius: 2px;
+
+}
+
+
+.grid-project p {
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.grid-project h2 {
+  margin-top: 1rem;
+}
+
+.grid-project button {
+  padding: 12.5px 30px;
+  border: 0;
+  border-radius: 100px;
+  background-color: var(--accent-light);
+  color: #ffffff;
+  font-weight: Bold;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  margin-top: 1rem;
+}
+
+
+.grid-project button:hover {
+  background-color: var(--accent-dark);
+  box-shadow: 0 0 20px #6fffbc50;
+  transform: scale(1.1);
+}
+
+.grid-project button:active {
+  background-color: var(--accent-dark);
+  transition: all 0.25s;
+  box-shadow: none;
+  transform: scale(0.98);
+}
+
+.grid-project img:hover {
+  transition: all 0.25s;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px var(--primary);
+}
+
+
+/* !!projects finish */
+/* !!technologies start */
+
+.techs {
+  width: 100%;
+  height: 100%;
+  margin-top: 20rem;
+}
+
+.techs h2 {
+  margin-bottom: 5rem;
+  margin-left: -3rem;
+  font-size: 3rem;
+}
+
+.bg-bar {
+  background-color: var(--secondary-dark);
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+  margin-top: -1rem;
+}
+
+.bg-bar,
+.fill-bar {
+  height: 1.5rem;
+}
+
+.level{
+  position: relative;
+  top: -1.5rem;
+  left:88%;
+}
+
+.fill-bar{
+  background: linear-gradient(90deg, var(--accent-dark) , var(--primary),var(--accent-light));
+  border-radius: 2rem;
+  box-shadow: 0 0 10px var(--accent-dark);
+}
+
+.fill-bar.html{
+  width: 80%;
+}
+
+.fill-bar.css{
+  width:55%
+}
+
+.fill-bar.js{
+  width:50%
+}
+
+.ul-skills{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 1rem;
+  text-align: center;
+  justify-content: center;
+  list-style-type: none;
+  padding-left: 1.5em;
+  font-size: 1.3rem;
+}
+/*TODO: ajust the size*/
+.h2-skills{
+  margin-top: 15rem;
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+
+.ul-skills .li-skills::before {
+  content: "\2022";
+  color: var(--accent-dark);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1.5em;
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+/*TODO: make the Technologies responsive*/
+/*!!Technologies finished*/
+
+/* !!about me start */
+.about{
+  margin-top: 20rem;
+}
+
+.about h2{
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+.about p{
+  font-size: 1.3rem;
+  margin-left: 2rem;
+}
+
+/* !!about me finished */
+
+/* !!footer start */
+
+.main-footer {
+  height: 6rem;
+  background-color: #1a1e25;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.main-footer div {
+  text-align: center;
+}
+
+.main-footer p {
+  margin: 0;
+}
+
+.social-links a {
+  margin-left: 1rem;
+  margin-right: 25px;
+  color: var(--text-dark);
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: all .50s ease;
+}
+
+.social-links a:first-child {
+  margin-left: 0;
+}
+
+
+
+
+.social-links a:hover {
+  color: var(--accent-dark);
+}
+
+/*TODO make the footer about me responsive later*/
+/* TODO fix the empty horizantal space */

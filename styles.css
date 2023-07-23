@@ -138,7 +138,7 @@ header {
     top: 100%;
     right: -100%;
     width: 270px;
-    background-color: var(--primary);
+    background-color: var(--accent-light);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -320,17 +320,7 @@ header+main {
   -webkit-transition: all 0.5s;
 }
 
-@media screen and (max-width: 767px) {
-  .projects {
-    grid-template-columns: repeat(1, 2fr);
-  }
 
-  @media screen and (min-width: 767px) and (max-width:1023px) {
-    .projects {
-      grid-template-columns: repeat(1, 2fr);
-    }
-  }
-}
 
 .p-div {
   margin-top: 20rem;
@@ -344,7 +334,7 @@ header+main {
 
 hr {
   height: 4px;
-  width: 15rem;
+  width: 90%;
   margin: auto;
   margin-top: 1rem;
   background: linear-gradient(90deg, var(--accent-dark), var(--primary));
@@ -395,6 +385,25 @@ hr {
   box-shadow: 0 0 15px var(--primary);
 }
 
+@media screen and (max-width: 767px) {
+  .projects {
+    grid-template-columns: repeat(1, 2fr);
+  }
+
+  .p-div .h2-p {
+    font-size: 2rem;  
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+
+}
+
+@media screen and (min-width: 767px) and (max-width:1023px) {
+  .projects {
+    grid-template-columns: repeat(1, 2fr);
+  }
+}
+
 
 /* !!projects finish */
 /* !!technologies start */
@@ -423,31 +432,31 @@ hr {
   height: 1.5rem;
 }
 
-.bar-label{
+.bar-label {
   display: flex;
   justify-content: space-between;
   padding-bottom: 1.5rem;
 }
 
-.fill-bar{
-  background: linear-gradient(90deg, var(--accent-dark) , var(--primary),var(--accent-light));
+.fill-bar {
+  background: linear-gradient(90deg, var(--accent-dark), var(--primary), var(--accent-light));
   border-radius: 2rem;
   box-shadow: 0 0 10px var(--accent-dark);
 }
 
-.fill-bar.html{
+.fill-bar.html {
   width: 80%;
 }
 
-.fill-bar.css{
-  width:55%
+.fill-bar.css {
+  width: 55%
 }
 
-.fill-bar.js{
-  width:50%
+.fill-bar.js {
+  width: 50%
 }
 
-.ul-skills{
+.ul-skills {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 1rem;
@@ -457,8 +466,8 @@ hr {
   padding-left: 1.5em;
   font-size: 1.3rem;
 }
-/*TODO: ajust the size*/
-.h2-skills{
+
+.h2-skills {
   margin-top: 15rem;
   font-size: 2rem;
   margin-bottom: 4rem;
@@ -473,22 +482,62 @@ hr {
   font-size: 1.5em;
   vertical-align: middle;
 }
-/*TODO: make the Technologies responsive*/
+
+@media screen and (max-width: 767px) {
+  .techs h2 {
+    margin-bottom: 2rem;
+    margin-left: 0.3rem;
+    font-size: 2rem;
+  }
+
+  .h2-skills{
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width:1023px) {
+  .techs h2 {
+    margin-bottom: 3rem;
+
+  }
+}
+
 /*!!Technologies finished*/
 
 /* !!about me start */
-.about{
+.about {
   margin-top: 20rem;
 }
 
-.about h2{
+.about h2 {
   margin-bottom: 2rem;
   font-size: 3rem;
 }
 
-.about p{
+.about p {
   font-size: 1.3rem;
   margin-left: 2rem;
+}
+
+@media screen and (max-width: 767px) {
+
+  
+  .about p {
+    font-size: 1rem;
+  }
+
+  .about h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  
+}
+
+@media screen and (min-width: 767px) and (max-width:1023px) {
+
+  .about p {
+    font-size: 1rem;
+  }
 }
 
 /* !!about me finished */
@@ -497,7 +546,7 @@ hr {
 
 .main-footer {
   height: 6rem;
-  background-color: #1a1e25;
+  background-color: var(--background-dark);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -513,7 +562,7 @@ hr {
 }
 
 .social-links a {
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
   margin-right: 25px;
   color: var(--text-dark);
   font-size: 1.5rem;
@@ -532,10 +581,5 @@ hr {
   color: var(--accent-dark);
 }
 
-/*TODO make the footer about me responsive later*/
+/*!! footer finish */
 
-.bar-label{
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 1.5rem;
-}
